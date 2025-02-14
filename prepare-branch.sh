@@ -53,7 +53,7 @@ branch() {
 	git branch -D "$branch" || true
 	git checkout --orphan "$branch"
 	git rm --cached -r .
-	rm -fr ./* .dockerignore
+	rm -fr ./* .dockerignore .github
 	mv "$dir"/* .
 	rmdir "$dir"
 	git add *
